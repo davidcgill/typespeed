@@ -15,8 +15,11 @@ type tester:
     allow for play agian or quick
 
 Future add ons:
-
-
+    words flying at the wall
+        words flying faster with time
+        difficulty level changes lives and word length
+        make a scoring system
+        ... doesn't help me make my end goal but does help learn animation of motion
 """
 #need this every time to make a something in pygame
 import pygame, random
@@ -319,8 +322,9 @@ def game_logic():
     type_string=""
     gameDisplay.fill(fill_colour)
     return correct_count,"timeout"
+  
+  
 def main():
-
     Exit=0
 
     while (not Exit):
@@ -329,7 +333,6 @@ def main():
 
         if cauuse_of_death=="manual":
             Exit=1
-            screen_click=1
 
         elif cauuse_of_death=="timeout":
 
