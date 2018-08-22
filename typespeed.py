@@ -238,7 +238,6 @@ def game_logic():
              if (event.type == pygame.KEYDOWN):
                  type_string,done =key_checker(event.key,type_string)
                  if type_string.find("h")>=0:
-                     print(type_string)
                      high_score_checker(0)
                      pygame.display.update()
 
@@ -314,9 +313,10 @@ def game_logic():
         #on refresh white out screen and then redraw becuase layer do erase what was there previously
 
         # after we finish the for loop (figuring out what happened and drawing things e.c.t) we want to actually show it on the screen
-
+        
         pygame.display.update() # it will update the whole window, but if a pass a parameter i will only update that
         clock.tick(60)  # in here you place frames per seconds
+    type_string=""
     gameDisplay.fill(fill_colour)
     return correct_count,"timeout"
 def main():
@@ -340,7 +340,7 @@ def main():
 
             text_display(score_string,(display_width/2, display_hieght/2))
             pygame.display.update()
-            pygame.time.delay(2000)
+            pygame.time.delay(4000)
             high_score_checker(score)
             #infomation gets hidden in highscore
             gameDisplay.fill(black)
